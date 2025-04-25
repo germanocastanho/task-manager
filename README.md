@@ -8,6 +8,10 @@ Script simples, objetivo simples - **gerenciar tarefas!** Liste, adicione e excl
 - **Salvamento em JSON:** 📄 Persistência entre sessões através do salvamento em um arquivo json.
 - **Interface Minimalista:** 🎨 Interação via linha de comando, porporcionando um maior foco nas tarefas.
 
+# ✅ Pré-requisitos
+
+- Python 3.12 ou superior, disponível através do [**site oficial**](https://www.python.org/downloads/).
+
 # 🛠️ Instalação Local
 
 ```bash
