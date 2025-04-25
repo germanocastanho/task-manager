@@ -24,24 +24,24 @@ OPTS = {
 }
 
 
-def user_options():
-    print("\n✨✨ TASKFLOW ME ✨✨\n")
+def get_user_choice():
+    print("\n✨✨ TASK MANAGER ✨✨\n")
     for key, value in OPTS.items():
         print(f"{key}: {value}")
 
-    chosen = input("\nEscolha uma opção: ")
-    return chosen
+    choice = input("\nEscolha uma opção: ")
+    return choice
 
 
-def invalid_option(chosen):
-    if chosen not in OPTS.keys():
+def invalid_option(choice):
+    if choice not in OPTS.keys():
         print("Opção inválida! 😅")
         time.sleep(1)
     return None
 
 
-def show_todo_list(chosen):
-    if chosen == "1":
+def show_todo_list(choice):
+    if choice == "1":
         print("\n📋 TAREFAS:\n")
         with open(JSON, "r") as f:
             tasks = json.load(f)
@@ -51,8 +51,8 @@ def show_todo_list(chosen):
     return None
 
 
-def add_new_task(chosen):
-    if chosen == "2":
+def add_new_task(choice):
+    if choice == "2":
         task = input("Digite a tarefa: ")
         with open(JSON, "r") as f:
             tasks = json.load(f)
@@ -64,8 +64,8 @@ def add_new_task(chosen):
     return None
 
 
-def delete_done_task(chosen):
-    if chosen == "3":
+def delete_done_task(choice):
+    if choice == "3":
         print("\n🎯 OPÇÕES\n")
         with open(JSON, "r") as f:
             tasks = json.load(f)
@@ -82,8 +82,8 @@ def delete_done_task(chosen):
     return None
 
 
-def quit_program(chosen):
-    if chosen == "q":
+def quit_program(choice):
+    if choice == "q":
         print("Saindo do programa... 👋")
         time.sleep(1)
         exit()
@@ -92,12 +92,12 @@ def quit_program(chosen):
 
 def main():
     while True:
-        chosen = user_options()
-        invalid_option(chosen)
-        show_todo_list(chosen)
-        add_new_task(chosen)
-        delete_done_task(chosen)
-        quit_program(chosen)
+        choice = get_user_choice()
+        invalid_option(choice)
+        show_todo_list(choice)
+        add_new_task(choice)
+        delete_done_task(choice)
+        quit_program(choice)
     return None
 
 

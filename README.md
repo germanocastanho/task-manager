@@ -1,4 +1,4 @@
-# 📋 TaskFlow Me
+# 📋 Task Manager
 
 Script simples, objetivo simples - **gerenciar tarefas!** Liste, adicione e exclua tarefas através de poucas interações com a linha de comando. Trata-se de uma solução prática para um gerenciamento de tarefas minimalista, leve e eficiente, sem complicações ou complexidades desnecessárias. 🎯
 
@@ -12,10 +12,10 @@ Script simples, objetivo simples - **gerenciar tarefas!** Liste, adicione e excl
 
 ```bash
 # Clone o repositório
-git clone https://github.com/germanocastanho/taskflow-me.git
+git clone https://github.com/germanocastanho/task-manager.git
 
 # Acesse o diretório
-cd taskflow-me
+cd task-manager
 
 # Configure um ambiente virtual
 python3 -m venv .venv
